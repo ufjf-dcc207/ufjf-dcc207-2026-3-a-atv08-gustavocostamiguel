@@ -4,14 +4,15 @@ import type { PacoteType } from "./Types";
 type Pacoteprops = {
 pacote: PacoteType;
 }
-export default function Pacote() {
+export default function Pacote({pacote}:Pacoteprops) {
     return (<div className="pacote">
             <dt>id</dt>
-            <dd title = {Pacote.id}>pacote.id.substring(2)</dd>
-            <dt>L{Pacote.largura}</dt>
-            <dd>20</dd>
-            <dt>A{Pacote.altura}</dt>
-            <dd>30</dd>
+
+            <dd title = {pacote.id}>{pacote.id.substring(2)}</dd>
+            <dt>Largura</dt>
+            <dd>{pacote.largura}</dd>
+            <dt>altura</dt>
+            <dd>{pacote.altura}</dd>
             <dt>{Pacote.profundidade}</dt>
             <dd>{Pacote.peso}</dd>
             <dt></dt>
