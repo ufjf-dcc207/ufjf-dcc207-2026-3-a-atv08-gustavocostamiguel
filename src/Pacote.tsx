@@ -17,5 +17,10 @@ export default function Pacote({pacote}:Pacoteprops) {
             <dd>{Pacote.peso}</dd>
             <dt></dt>
             <dd>2.34</dd>
-        </div>)
+        </div>
+    <buttton onClick = (() => dispacher({type: "excluir", id:pacote.id)})>Excluir</button>
+        <buttton onClick = (() => dispacher({type: "repetir",id: pacote.id, dimensao:dimensao})>Excluir</button>
+    ) </dd> </div>
 }
+
+//está no repositório

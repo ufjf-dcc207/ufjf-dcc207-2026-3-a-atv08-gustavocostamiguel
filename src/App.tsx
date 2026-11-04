@@ -1,3 +1,4 @@
+
 import './App.css'
 import Pacote from './Pacote'
 import type { PacoteType } from './Types'
@@ -16,10 +17,16 @@ const data:Array<PacoteType> = [
   peso: 2.34},
 ]
 export default function App() {
+const [pacote, dispacher] = useReducer(pacoteReducer,data);
+
+
+// function excluirPacote(id string) não existe mais o reducer faz tudo
+
   return (<section>
       <h2>Pacotes</h2>
+      <ListagemPacotes pacotes ={pacotes}, dispacher = {dispacher};
       <div className="pacotes">
-{data.map(p => <Pacote pacote ={p}, key ={p.id}/>)}
+{data.map(p => <Pacote pacote ={p}, key ={p.id}/>)}   //só o dispacher invés de 10 ações não está pronto
 
 function(p){return <Pacote pacote = {p}}
 
