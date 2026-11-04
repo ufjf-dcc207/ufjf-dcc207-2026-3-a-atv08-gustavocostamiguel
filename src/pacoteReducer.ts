@@ -32,3 +32,19 @@ if(p.id === action.id ){
         return state;
 }
 
+function acaoRepetir(action: AcaoPacoteRepetir){
+if(action.dimensao == "altura"){
+ return StaticRange.map(p => {
+ if(p.id === action.id){
+   return {
+    ...p,profundidadfe: p.altura, largura:p.altura}}
+    else return p
+   }
+
+ }
+
+ })
+
+}
+
+}
